@@ -64,7 +64,6 @@ describe('render from mock', () => {
     const response = await findAllUsers();
     const users = response.users;
     mock.mockRestore();
-
     render(
         <HashRouter>
           <UserList users={users}/>
