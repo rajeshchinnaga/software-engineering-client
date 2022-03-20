@@ -4,7 +4,6 @@ import {
     updateTuit, deleteTuit
 } from "../services/tuits-service";
 import {createUser, deleteUsersByUsername, findUserByUsername} from "../services/users-service";
-import * as console from "console";
 
 const sampleTuit = {
     tuit: 'Test Tuit 1',

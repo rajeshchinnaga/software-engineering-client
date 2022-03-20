@@ -1,4 +1,4 @@
-import {Tuits} from "../components/tuits";
+import Tuits from "../components/tuits";
 import {screen, render} from "@testing-library/react";
 import {HashRouter} from "react-router-dom";
 import {createTuit, deleteTuit, findAllTuits} from "../services/tuits-service";
@@ -12,9 +12,9 @@ const MOCKED_USERS = [
 ];
 
 const MOCKED_TUITS = [
-  {tuit: "alice's tuit", postedBy: {username: "Alice", email: "alice@gmail.com"}, _id: "4444"},
-  {tuit: "bob's tuit", postedBy: {username: "Bob", email: "bob@gmail.inc"}, _id: "5555"},
-  {tuit: "charlie's tuit", postedBy: {username: "Charlie", email: "charlie@gmail.com"}, _id: "6666"},
+  {tuit: "alice's tuit", postedBy: "Alice", _id: "4444"},
+  {tuit: "bob's tuit", postedBy: "Bob", _id: "5555"},
+  {tuit: "charlie's tuit", postedBy: "Charlie", _id: "6666"},
 ];
 
 
