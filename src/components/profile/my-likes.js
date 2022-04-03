@@ -1,16 +1,18 @@
 import Tuits from "../tuits";
 import * as service from "../../services/likes-service";
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 const MyLikes = () => {
-    const [likedTuits, setLikedTuis] = useState([]);
+    const [likedTuits, setLikedTuits] = useState([]);
     const findTuitsILike = () =>
         service.findAllTuitsLikedByUser("me")
-            .then((tuits) => setLikedTuis(tuits));
+            .then((tuits) => setLikedTuits(tuits));
     useEffect(findTuitsILike, []);
     
     return(
         <div>
+            <h2>My Likes</h2>
             <Tuits tuits={likedTuits} refreshTuits={findTuitsILike}/>
         </div>
     );
